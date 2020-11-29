@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Host, Input, OnInit } from '@angular/core';
+import { AppComponent } from 'src/app/app.component';
 
 @Component({
   selector: 'app-navbar',
@@ -6,10 +7,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./navbar.component.css'],
 })
 export class NavbarComponent implements OnInit {
-  isLogged: boolean = false;
   num: number;
 
-  constructor() {}
+  constructor(@Host() public _app: AppComponent) {}
 
   ngOnInit(): void {}
 

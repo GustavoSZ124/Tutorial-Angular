@@ -1,7 +1,10 @@
 <!--  -->
 <app-navbar></app-navbar>
 <div class="container-fluid">
-    <h2>{{title}}</h2>
-    <app-login></app-login>
+    <div class="row">
+        <div class="col col-sm-3">
+            <app-login></app-login>
+        </div>
+    </div>
     <router-outlet></router-outlet>
 </div>
