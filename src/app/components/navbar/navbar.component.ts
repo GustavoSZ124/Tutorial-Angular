@@ -9,9 +9,9 @@ export class NavbarComponent implements OnInit {
   isLogged: boolean = false;
   num: number;
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit(): void { }
+  ngOnInit(): void {}
 
   increment(): void {
     if (this.num == null) this.num = 0;
