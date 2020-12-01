@@ -1,0 +1,25 @@
+<!--  -->
+<form [formGroup]="signupForm" (ngSubmit)="submitForm(signupForm.value)">
+    <h4 class="">Registro</h4>
+    <div class="form-group">
+        <label for="name">nombre</label>
+        <input formControlName="nombre" type="text" class="form-control" id="name" placeholder="nombre" />
+    </div>
+    <div class="form-group">
+        <label for="email">correo electronico</label>
+        <input formControlName="email" type="email" class="form-control" id="email" placeholder="email"
+            aria-describedby="alert" />
+        <ng-container *ngIf="signupForm.get('email').hasError('email') && signupForm.get('email').touched">
+            <small id="alert" class="form-text text-danger text-right">correo electronico invalido</small>
+        </ng-container>
+    </div>
+    <!-- <div *ngIf="signupForm.get('email').hasError('email') && signupForm.get('email').touched"
+        class="alert alert-danger">
+        correo electronico invalido
+    </div> -->
+    <div class="form-group">
+        <label for="pass">contraseña</label>
+        <input formControlName="clave" type="password" class="form-control" id="pass" placeholder="contraseña" />
+    </div>
+    <button [disabled]="signupForm.invalid" type="submit" class="btn btn-block btn-primary">registrar</button>
+</form>

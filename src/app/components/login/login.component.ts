@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Host, OnInit, Output } from '@angular/core';
+import { Component, Host, OnInit } from '@angular/core';
 import { AppComponent } from 'src/app/app.component';
 import { ApiService } from 'src/app/services/api.service';
 import { UserService } from './../../services/user.service';
